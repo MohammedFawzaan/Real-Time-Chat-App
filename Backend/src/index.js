@@ -3,7 +3,7 @@ import express from "express"
 import messageRoutes from "./routes/message.route.js";
 import authRoutes from "./routes/auth.route.js";
 
-import cors from "cors"
+import cors from "cors";
 import dotenv from "dotenv";
 
 import { connectDB } from "./lib/db.js";
@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(cors({
     origin: "http://localhost:5173",
     credentials: true
-}))
+}));
 
 // middleware for authRoutes
 app.use("/api/auth", authRoutes);
